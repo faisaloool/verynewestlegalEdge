@@ -206,7 +206,7 @@ Partial Class frmAddLawyer
         Me.comboRole.Font = New System.Drawing.Font("Lucida Bright", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.comboRole.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(52, Byte), Integer))
         Me.comboRole.FormattingEnabled = True
-        Me.comboRole.Items.AddRange(New Object() {"Lawyer", "Mangager"})
+        Me.comboRole.Items.AddRange(New Object() {"Lawyer", "Manager"})
         Me.comboRole.Location = New System.Drawing.Point(48, 313)
         Me.comboRole.Margin = New System.Windows.Forms.Padding(2)
         Me.comboRole.Name = "comboRole"
@@ -246,19 +246,19 @@ Partial Class frmAddLawyer
         'LogoutToolStripMenuItem
         '
         Me.LogoutToolStripMenuItem.Name = "LogoutToolStripMenuItem"
-        Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(179, 22)
+        Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.LogoutToolStripMenuItem.Text = "Logout"
         '
         'ChangePasswordToolStripMenuItem
         '
         Me.ChangePasswordToolStripMenuItem.Name = "ChangePasswordToolStripMenuItem"
-        Me.ChangePasswordToolStripMenuItem.Size = New System.Drawing.Size(179, 22)
+        Me.ChangePasswordToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ChangePasswordToolStripMenuItem.Text = "Change Password"
         '
         'MyPRofileToolStripMenuItem
         '
         Me.MyPRofileToolStripMenuItem.Name = "MyPRofileToolStripMenuItem"
-        Me.MyPRofileToolStripMenuItem.Size = New System.Drawing.Size(179, 22)
+        Me.MyPRofileToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.MyPRofileToolStripMenuItem.Text = "My Profile"
         '
         'MenuStrip1

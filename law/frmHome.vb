@@ -13,4 +13,8 @@
         frmServices.Show()
         Me.Hide()
     End Sub
+
+    Private Sub frmHome_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        SendEMessage()
+    End Sub
 End Class

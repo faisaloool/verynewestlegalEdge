@@ -1,7 +1,78 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Data
+Imports System.Net.Mail
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+Imports System.Globalization
 Module Module1
 
     Public con As New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\albab\OneDrive\Desktop\the newest legaledge\Newest_LegalEdge-master (2)\Newest_LegalEdge-master\law\LegalEdgeDatabase.mdf;Integrated Security=True")
 
+    Private cmd As New SqlCommand
+
+    Function IsSessionTomorrow(sessionDate As String) As Boolean
+        Dim todayDate As String = Date.Today.ToString("dd/MM/yyyy")
+
+        Try
+            Dim parsedSessionDate As Date = DateTime.ParseExact(sessionDate, "dd/MM/yyyy", CultureInfo.InvariantCulture)
+            Dim difference As TimeSpan = parsedSessionDate - Date.Today
+
+            If difference.TotalDays = 1 Then
+                Return True
+            Else
+                Return False
+            End If
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
+    Private Sub sendEmail(personName As String, email As String)
+        Try
+            Dim mail As New MailMessage()
+            Dim smtp As New SmtpClient("smtp.gmail.com")
+
+            mail.From = New MailAddress("legaledge81@gmail.com")
+            mail.To.Add(email)
+            mail.Subject = "Test Email"
+            mail.Body = "This is a test email sent using VB.NET!"
+
+            smtp.Port = 587
+            smtp.Credentials = New Net.NetworkCredential("legaledge81@gmail.com", "bqff aldw psaz jptl")
+            smtp.EnableSsl = True
+
+            smtp.Send(mail)
+        Catch ex As Exception
+            MessageBox.Show("Error While Sending Email")
+        End Try
+
+    End Sub
+
+    Public Sub SendEMessage()
+        Try
+            If con.State = ConnectionState.Open Then
+                con.Close()
+            End If
+            con.Open()
+
+            cmd = con.CreateCommand()
+            cmd.CommandType = CommandType.Text
+            'cmd.CommandText = "select * from Session where Email_Status = " & v & ""
+            Dim v As String = "False"
+            cmd.CommandText = "SELECT Session.*, Client.Name, Client.Email FROM Session INNER JOIN [Case] ON Session.Case_ID = [Case].Case_ID INNER JOIN Client ON [Case].Client_ID = Client.Client_ID WHERE Session.Email_Status = " & v & ""
+            cmd.ExecuteNonQuery()
+
+            Dim dr As SqlClient.SqlDataReader
+            dr = cmd.ExecuteReader(CommandBehavior.CloseConnection)
+            While dr.Read
+                Dim SessionDate As String = dr("Date")
+                Dim isTomorrow As Boolean = IsSessionTomorrow(SessionDate)
+                If isTomorrow Then
+                    sendEmail(dr("name"), dr("Email"))
+                End If
+            End While
+            MessageBox.Show("No Errors :)")
+        Catch ex As Exception
+            MessageBox.Show("Error in module page exception line 74: " & ex.Message)
+        End Try
+
+    End Sub
 End Module

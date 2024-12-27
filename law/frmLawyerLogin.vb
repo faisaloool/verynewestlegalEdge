@@ -35,13 +35,20 @@ Public Class frmLawyerLogin
                 MessageBox.Show("Login Successfully")
 
                 reader.Read()
-                frmLawyer.fillForm(reader("Name").ToString, reader("Email").ToString, reader("Phone_Number").ToString, reader("Birthdate").ToString, reader("Nationality").ToString, reader("Address").ToString, reader("Role").ToString, reader("Lawyer_ID").ToString, reader("Password").ToString)
-                frmLawyer.x = reader("Lawyer_ID")
-                frmLawyer.Show()
-                Me.Close()
+                If reader("Role") = "Lawyer" Then
+                    frmLawyer.fillForm(reader("Name").ToString, reader("Email").ToString, reader("Phone_Number").ToString, reader("Birthdate").ToString, reader("Nationality").ToString, reader("Address").ToString, reader("Role").ToString, reader("Lawyer_ID").ToString, reader("Password").ToString)
+                    frmLawyer.x = reader("Lawyer_ID")
+                    frmLawyer.Show()
+                    Me.Close()
+                ElseIf reader("Role") = "Manager" Then
+                    frmManager.Show()
+                    Me.Hide()
+                End If
+
+
                 reader.Close()
             Else
-                MessageBox.Show("Id / Password Are Incorrect.")
+                    MessageBox.Show("Id / Password Are Incorrect.")
             End If
 
         Catch ex As Exception

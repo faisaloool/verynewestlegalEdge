@@ -14,6 +14,7 @@ Public Class frmAddCase
         ComboBox1.Items.Add("Environmental")
         ComboBox1.Items.Add("Tax")
         ComboBox1.Items.Add("International")
+
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click

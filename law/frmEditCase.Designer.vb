@@ -32,25 +32,29 @@ Partial Class frmEditCase
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtDescription = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
+        Me.txtTitle = New System.Windows.Forms.TextBox()
+        Me.txtLawyerID = New System.Windows.Forms.TextBox()
+        Me.comboCaseType = New System.Windows.Forms.ComboBox()
+        Me.btnSave = New System.Windows.Forms.Button()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.HomeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ServeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ContactToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.LoginToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.comboStatement = New System.Windows.Forms.ComboBox()
+        Me.txtEmail = New System.Windows.Forms.TextBox()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.txtRemainingCost = New System.Windows.Forms.TextBox()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.txtPaidCost = New System.Windows.Forms.TextBox()
+        Me.btnDownloadDoc = New System.Windows.Forms.Button()
+        Me.btnuploadDoc = New System.Windows.Forms.Button()
+        Me.btnAddSession = New System.Windows.Forms.Button()
+        Me.txtDecision = New System.Windows.Forms.TextBox()
+        Me.btnBack = New System.Windows.Forms.Button()
+        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
@@ -58,10 +62,10 @@ Partial Class frmEditCase
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Lucida Fax", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(199, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(564, 44)
+        Me.Label1.Location = New System.Drawing.Point(462, 9)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(182, 40)
+        Me.Label1.Size = New System.Drawing.Size(148, 32)
         Me.Label1.TabIndex = 7
         Me.Label1.Text = "Edit Case" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
@@ -70,10 +74,10 @@ Partial Class frmEditCase
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Lucida Fax", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(199, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(48, 161)
+        Me.Label2.Location = New System.Drawing.Point(29, 75)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(169, 20)
+        Me.Label2.Size = New System.Drawing.Size(137, 16)
         Me.Label2.TabIndex = 8
         Me.Label2.Text = "Case Description:"
         '
@@ -82,10 +86,10 @@ Partial Class frmEditCase
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Lucida Fax", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(199, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(48, 231)
+        Me.Label3.Location = New System.Drawing.Point(29, 169)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(105, 20)
+        Me.Label3.Size = New System.Drawing.Size(86, 16)
         Me.Label3.TabIndex = 9
         Me.Label3.Text = "Statement:"
         '
@@ -94,22 +98,22 @@ Partial Class frmEditCase
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Lucida Fax", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(199, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(48, 298)
+        Me.Label4.Location = New System.Drawing.Point(494, 252)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(134, 20)
+        Me.Label4.Size = New System.Drawing.Size(84, 16)
         Me.Label4.TabIndex = 10
-        Me.Label4.Text = "Lawyer Name:"
+        Me.Label4.Text = "Lawyer ID:"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Lucida Fax", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(199, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(48, 355)
+        Me.Label5.Location = New System.Drawing.Point(29, 210)
         Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(133, 20)
+        Me.Label5.Size = New System.Drawing.Size(107, 16)
         Me.Label5.TabIndex = 11
         Me.Label5.Text = "Starting Date:"
         '
@@ -118,10 +122,10 @@ Partial Class frmEditCase
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Lucida Fax", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(199, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(704, 357)
+        Me.Label6.Location = New System.Drawing.Point(29, 252)
         Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(126, 20)
+        Me.Label6.Size = New System.Drawing.Size(100, 16)
         Me.Label6.TabIndex = 12
         Me.Label6.Text = "Ending Date:"
         '
@@ -130,10 +134,10 @@ Partial Class frmEditCase
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Lucida Fax", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(199, Byte), Integer))
-        Me.Label7.Location = New System.Drawing.Point(51, 404)
+        Me.Label7.Location = New System.Drawing.Point(29, 291)
         Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(94, 20)
+        Me.Label7.Size = New System.Drawing.Size(75, 16)
         Me.Label7.TabIndex = 13
         Me.Label7.Text = "Decision:"
         '
@@ -142,10 +146,10 @@ Partial Class frmEditCase
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Lucida Fax", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(199, Byte), Integer))
-        Me.Label8.Location = New System.Drawing.Point(51, 507)
+        Me.Label8.Location = New System.Drawing.Point(29, 396)
         Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(102, 20)
+        Me.Label8.Size = New System.Drawing.Size(82, 16)
         Me.Label8.TabIndex = 14
         Me.Label8.Text = "Case Type"
         '
@@ -154,34 +158,24 @@ Partial Class frmEditCase
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Lucida Fax", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(199, Byte), Integer))
-        Me.Label9.Location = New System.Drawing.Point(704, 507)
+        Me.Label9.Location = New System.Drawing.Point(494, 210)
         Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(50, 20)
+        Me.Label9.Size = New System.Drawing.Size(41, 16)
         Me.Label9.TabIndex = 15
         Me.Label9.Text = "Title"
         '
-        'TextBox1
+        'txtDescription
         '
-        Me.TextBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(137, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(114, Byte), Integer))
-        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox1.Font = New System.Drawing.Font("Lucida Fax", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.ForeColor = System.Drawing.Color.White
-        Me.TextBox1.Location = New System.Drawing.Point(285, 161)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(295, 22)
-        Me.TextBox1.TabIndex = 16
-        '
-        'TextBox2
-        '
-        Me.TextBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(137, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(114, Byte), Integer))
-        Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox2.Font = New System.Drawing.Font("Lucida Fax", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.ForeColor = System.Drawing.Color.White
-        Me.TextBox2.Location = New System.Drawing.Point(285, 231)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(295, 22)
-        Me.TextBox2.TabIndex = 17
+        Me.txtDescription.BackColor = System.Drawing.Color.FromArgb(CType(CType(137, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(114, Byte), Integer))
+        Me.txtDescription.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtDescription.Font = New System.Drawing.Font("Lucida Fax", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDescription.ForeColor = System.Drawing.Color.White
+        Me.txtDescription.Location = New System.Drawing.Point(173, 75)
+        Me.txtDescription.Multiline = True
+        Me.txtDescription.Name = "txtDescription"
+        Me.txtDescription.Size = New System.Drawing.Size(523, 74)
+        Me.txtDescription.TabIndex = 16
         '
         'TextBox3
         '
@@ -189,9 +183,9 @@ Partial Class frmEditCase
         Me.TextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TextBox3.Font = New System.Drawing.Font("Lucida Fax", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox3.ForeColor = System.Drawing.Color.White
-        Me.TextBox3.Location = New System.Drawing.Point(285, 298)
+        Me.TextBox3.Location = New System.Drawing.Point(170, 210)
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(295, 22)
+        Me.TextBox3.Size = New System.Drawing.Size(295, 17)
         Me.TextBox3.TabIndex = 18
         '
         'TextBox4
@@ -200,66 +194,209 @@ Partial Class frmEditCase
         Me.TextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TextBox4.Font = New System.Drawing.Font("Lucida Fax", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox4.ForeColor = System.Drawing.Color.White
-        Me.TextBox4.Location = New System.Drawing.Point(285, 355)
+        Me.TextBox4.Location = New System.Drawing.Point(170, 251)
         Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(295, 22)
+        Me.TextBox4.Size = New System.Drawing.Size(295, 17)
         Me.TextBox4.TabIndex = 19
         '
-        'TextBox5
+        'txtTitle
         '
-        Me.TextBox5.BackColor = System.Drawing.Color.FromArgb(CType(CType(137, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(114, Byte), Integer))
-        Me.TextBox5.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox5.Font = New System.Drawing.Font("Lucida Fax", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox5.ForeColor = System.Drawing.Color.White
-        Me.TextBox5.Location = New System.Drawing.Point(285, 404)
-        Me.TextBox5.Multiline = True
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(867, 80)
-        Me.TextBox5.TabIndex = 20
+        Me.txtTitle.BackColor = System.Drawing.Color.FromArgb(CType(CType(137, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(114, Byte), Integer))
+        Me.txtTitle.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtTitle.Font = New System.Drawing.Font("Lucida Fax", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTitle.ForeColor = System.Drawing.Color.White
+        Me.txtTitle.Location = New System.Drawing.Point(647, 210)
+        Me.txtTitle.Name = "txtTitle"
+        Me.txtTitle.Size = New System.Drawing.Size(295, 17)
+        Me.txtTitle.TabIndex = 21
         '
-        'TextBox6
+        'txtLawyerID
         '
-        Me.TextBox6.BackColor = System.Drawing.Color.FromArgb(CType(CType(137, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(114, Byte), Integer))
-        Me.TextBox6.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox6.Font = New System.Drawing.Font("Lucida Fax", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox6.ForeColor = System.Drawing.Color.White
-        Me.TextBox6.Location = New System.Drawing.Point(857, 355)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(295, 22)
-        Me.TextBox6.TabIndex = 21
+        Me.txtLawyerID.BackColor = System.Drawing.Color.FromArgb(CType(CType(137, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(114, Byte), Integer))
+        Me.txtLawyerID.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtLawyerID.Font = New System.Drawing.Font("Lucida Fax", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtLawyerID.ForeColor = System.Drawing.Color.White
+        Me.txtLawyerID.Location = New System.Drawing.Point(647, 251)
+        Me.txtLawyerID.Name = "txtLawyerID"
+        Me.txtLawyerID.Size = New System.Drawing.Size(295, 17)
+        Me.txtLawyerID.TabIndex = 22
         '
-        'TextBox7
+        'comboCaseType
         '
-        Me.TextBox7.BackColor = System.Drawing.Color.FromArgb(CType(CType(137, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(114, Byte), Integer))
-        Me.TextBox7.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox7.Font = New System.Drawing.Font("Lucida Fax", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox7.ForeColor = System.Drawing.Color.White
-        Me.TextBox7.Location = New System.Drawing.Point(857, 504)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(295, 22)
-        Me.TextBox7.TabIndex = 22
+        Me.comboCaseType.BackColor = System.Drawing.Color.FromArgb(CType(CType(137, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(114, Byte), Integer))
+        Me.comboCaseType.ForeColor = System.Drawing.Color.Black
+        Me.comboCaseType.FormattingEnabled = True
+        Me.comboCaseType.Items.AddRange(New Object() {"Environmental"})
+        Me.comboCaseType.Location = New System.Drawing.Point(170, 393)
+        Me.comboCaseType.Name = "comboCaseType"
+        Me.comboCaseType.Size = New System.Drawing.Size(316, 24)
+        Me.comboCaseType.TabIndex = 23
         '
-        'ComboBox1
+        'btnSave
         '
-        Me.ComboBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(137, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(114, Byte), Integer))
-        Me.ComboBox1.ForeColor = System.Drawing.Color.Black
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Environmental"})
-        Me.ComboBox1.Location = New System.Drawing.Point(285, 504)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(316, 28)
-        Me.ComboBox1.TabIndex = 23
+        Me.btnSave.BackColor = System.Drawing.Color.Black
+        Me.btnSave.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnSave.Location = New System.Drawing.Point(341, 446)
+        Me.btnSave.Name = "btnSave"
+        Me.btnSave.Size = New System.Drawing.Size(339, 51)
+        Me.btnSave.TabIndex = 24
+        Me.btnSave.Text = "Save Changes"
+        Me.btnSave.UseVisualStyleBackColor = False
         '
-        'Button1
+        'Label10
         '
-        Me.Button1.BackColor = System.Drawing.Color.Black
-        Me.Button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Button1.Location = New System.Drawing.Point(437, 598)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(339, 51)
-        Me.Button1.TabIndex = 24
-        Me.Button1.Text = "Save Changes"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Lucida Fax", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(72, Byte), Integer))
+        Me.Label10.Location = New System.Drawing.Point(12, 9)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(86, 32)
+        Me.Label10.TabIndex = 26
+        Me.Label10.Text = "LegalEdge " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Associates"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(538, 301)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(0, 16)
+        Me.Label11.TabIndex = 25
+        '
+        'comboStatement
+        '
+        Me.comboStatement.BackColor = System.Drawing.Color.FromArgb(CType(CType(137, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(114, Byte), Integer))
+        Me.comboStatement.ForeColor = System.Drawing.Color.Black
+        Me.comboStatement.FormattingEnabled = True
+        Me.comboStatement.Items.AddRange(New Object() {"Environmental"})
+        Me.comboStatement.Location = New System.Drawing.Point(170, 166)
+        Me.comboStatement.Name = "comboStatement"
+        Me.comboStatement.Size = New System.Drawing.Size(295, 24)
+        Me.comboStatement.TabIndex = 29
+        '
+        'txtEmail
+        '
+        Me.txtEmail.BackColor = System.Drawing.Color.FromArgb(CType(CType(137, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(114, Byte), Integer))
+        Me.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtEmail.Font = New System.Drawing.Font("Lucida Fax", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtEmail.ForeColor = System.Drawing.Color.White
+        Me.txtEmail.Location = New System.Drawing.Point(647, 169)
+        Me.txtEmail.Name = "txtEmail"
+        Me.txtEmail.Size = New System.Drawing.Size(295, 17)
+        Me.txtEmail.TabIndex = 31
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Lucida Fax", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(199, Byte), Integer))
+        Me.Label12.Location = New System.Drawing.Point(494, 171)
+        Me.Label12.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(53, 16)
+        Me.Label12.TabIndex = 30
+        Me.Label12.Text = "Email:"
+        '
+        'txtRemainingCost
+        '
+        Me.txtRemainingCost.BackColor = System.Drawing.Color.FromArgb(CType(CType(137, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(114, Byte), Integer))
+        Me.txtRemainingCost.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtRemainingCost.Font = New System.Drawing.Font("Lucida Fax", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtRemainingCost.ForeColor = System.Drawing.Color.White
+        Me.txtRemainingCost.Location = New System.Drawing.Point(841, 75)
+        Me.txtRemainingCost.Name = "txtRemainingCost"
+        Me.txtRemainingCost.Size = New System.Drawing.Size(101, 17)
+        Me.txtRemainingCost.TabIndex = 33
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Lucida Fax", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(199, Byte), Integer))
+        Me.Label13.Location = New System.Drawing.Point(706, 75)
+        Me.Label13.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(128, 16)
+        Me.Label13.TabIndex = 32
+        Me.Label13.Text = "Remaining Cost:"
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Font = New System.Drawing.Font("Lucida Fax", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(199, Byte), Integer))
+        Me.Label14.Location = New System.Drawing.Point(706, 109)
+        Me.Label14.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(80, 16)
+        Me.Label14.TabIndex = 34
+        Me.Label14.Text = "Paid Cost:"
+        '
+        'txtPaidCost
+        '
+        Me.txtPaidCost.BackColor = System.Drawing.Color.FromArgb(CType(CType(137, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(114, Byte), Integer))
+        Me.txtPaidCost.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtPaidCost.Font = New System.Drawing.Font("Lucida Fax", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPaidCost.ForeColor = System.Drawing.Color.White
+        Me.txtPaidCost.Location = New System.Drawing.Point(841, 109)
+        Me.txtPaidCost.Name = "txtPaidCost"
+        Me.txtPaidCost.Size = New System.Drawing.Size(101, 17)
+        Me.txtPaidCost.TabIndex = 35
+        '
+        'btnDownloadDoc
+        '
+        Me.btnDownloadDoc.BackColor = System.Drawing.Color.Black
+        Me.btnDownloadDoc.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnDownloadDoc.Location = New System.Drawing.Point(834, 513)
+        Me.btnDownloadDoc.Name = "btnDownloadDoc"
+        Me.btnDownloadDoc.Size = New System.Drawing.Size(108, 51)
+        Me.btnDownloadDoc.TabIndex = 36
+        Me.btnDownloadDoc.Text = "Download Docs"
+        Me.btnDownloadDoc.UseVisualStyleBackColor = False
+        '
+        'btnuploadDoc
+        '
+        Me.btnuploadDoc.BackColor = System.Drawing.Color.Black
+        Me.btnuploadDoc.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnuploadDoc.Location = New System.Drawing.Point(834, 449)
+        Me.btnuploadDoc.Name = "btnuploadDoc"
+        Me.btnuploadDoc.Size = New System.Drawing.Size(108, 51)
+        Me.btnuploadDoc.TabIndex = 37
+        Me.btnuploadDoc.Text = "Upload Docs"
+        Me.btnuploadDoc.UseVisualStyleBackColor = False
+        '
+        'btnAddSession
+        '
+        Me.btnAddSession.BackColor = System.Drawing.Color.Black
+        Me.btnAddSession.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnAddSession.Location = New System.Drawing.Point(834, 385)
+        Me.btnAddSession.Name = "btnAddSession"
+        Me.btnAddSession.Size = New System.Drawing.Size(108, 51)
+        Me.btnAddSession.TabIndex = 38
+        Me.btnAddSession.Text = "add session"
+        Me.btnAddSession.UseVisualStyleBackColor = False
+        '
+        'txtDecision
+        '
+        Me.txtDecision.BackColor = System.Drawing.Color.FromArgb(CType(CType(137, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(114, Byte), Integer))
+        Me.txtDecision.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtDecision.Font = New System.Drawing.Font("Lucida Fax", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDecision.ForeColor = System.Drawing.Color.White
+        Me.txtDecision.Location = New System.Drawing.Point(170, 291)
+        Me.txtDecision.Multiline = True
+        Me.txtDecision.Name = "txtDecision"
+        Me.txtDecision.Size = New System.Drawing.Size(772, 74)
+        Me.txtDecision.TabIndex = 39
+        '
+        'btnBack
+        '
+        Me.btnBack.BackColor = System.Drawing.Color.Black
+        Me.btnBack.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnBack.Location = New System.Drawing.Point(341, 513)
+        Me.btnBack.Name = "btnBack"
+        Me.btnBack.Size = New System.Drawing.Size(339, 51)
+        Me.btnBack.TabIndex = 40
+        Me.btnBack.Text = "Back"
+        Me.btnBack.UseVisualStyleBackColor = False
         '
         'PictureBox5
         '
@@ -271,87 +408,34 @@ Partial Class frmEditCase
         Me.PictureBox5.TabIndex = 27
         Me.PictureBox5.TabStop = False
         '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Lucida Fax", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(72, Byte), Integer))
-        Me.Label10.Location = New System.Drawing.Point(12, 9)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(106, 40)
-        Me.Label10.TabIndex = 26
-        Me.Label10.Text = "LegalEdge " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Associates"
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(554, 342)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(0, 20)
-        Me.Label11.TabIndex = 25
-        '
-        'MenuStrip1
-        '
-        Me.MenuStrip1.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.MenuStrip1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.MenuStrip1.Dock = System.Windows.Forms.DockStyle.None
-        Me.MenuStrip1.Font = New System.Drawing.Font("Lucida Fax", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HomeToolStripMenuItem, Me.ServeToolStripMenuItem, Me.ContactToolStripMenuItem, Me.LoginToolStripMenuItem})
-        Me.MenuStrip1.Location = New System.Drawing.Point(807, 9)
-        Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(6, 1, 0, 1)
-        Me.MenuStrip1.Size = New System.Drawing.Size(507, 38)
-        Me.MenuStrip1.TabIndex = 28
-        Me.MenuStrip1.Text = "MenuStrip1"
-        '
-        'HomeToolStripMenuItem
-        '
-        Me.HomeToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(72, Byte), Integer))
-        Me.HomeToolStripMenuItem.Name = "HomeToolStripMenuItem"
-        Me.HomeToolStripMenuItem.Size = New System.Drawing.Size(111, 36)
-        Me.HomeToolStripMenuItem.Text = "Home"
-        '
-        'ServeToolStripMenuItem
-        '
-        Me.ServeToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(72, Byte), Integer))
-        Me.ServeToolStripMenuItem.Name = "ServeToolStripMenuItem"
-        Me.ServeToolStripMenuItem.Size = New System.Drawing.Size(145, 36)
-        Me.ServeToolStripMenuItem.Text = "Services"
-        '
-        'ContactToolStripMenuItem
-        '
-        Me.ContactToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(72, Byte), Integer))
-        Me.ContactToolStripMenuItem.Name = "ContactToolStripMenuItem"
-        Me.ContactToolStripMenuItem.Size = New System.Drawing.Size(137, 36)
-        Me.ContactToolStripMenuItem.Text = "Contact"
-        '
-        'LoginToolStripMenuItem
-        '
-        Me.LoginToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(72, Byte), Integer))
-        Me.LoginToolStripMenuItem.Name = "LoginToolStripMenuItem"
-        Me.LoginToolStripMenuItem.Size = New System.Drawing.Size(106, 36)
-        Me.LoginToolStripMenuItem.Text = "Login"
-        '
         'frmEditCase
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1213, 680)
-        Me.Controls.Add(Me.MenuStrip1)
+        Me.ClientSize = New System.Drawing.Size(985, 578)
+        Me.Controls.Add(Me.btnBack)
+        Me.Controls.Add(Me.txtDecision)
+        Me.Controls.Add(Me.btnAddSession)
+        Me.Controls.Add(Me.btnuploadDoc)
+        Me.Controls.Add(Me.btnDownloadDoc)
+        Me.Controls.Add(Me.txtPaidCost)
+        Me.Controls.Add(Me.Label14)
+        Me.Controls.Add(Me.txtRemainingCost)
+        Me.Controls.Add(Me.Label13)
+        Me.Controls.Add(Me.txtEmail)
+        Me.Controls.Add(Me.Label12)
+        Me.Controls.Add(Me.comboStatement)
         Me.Controls.Add(Me.PictureBox5)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label11)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.TextBox7)
-        Me.Controls.Add(Me.TextBox6)
-        Me.Controls.Add(Me.TextBox5)
+        Me.Controls.Add(Me.btnSave)
+        Me.Controls.Add(Me.comboCaseType)
+        Me.Controls.Add(Me.txtLawyerID)
+        Me.Controls.Add(Me.txtTitle)
         Me.Controls.Add(Me.TextBox4)
         Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtDescription)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
@@ -366,8 +450,6 @@ Partial Class frmEditCase
         Me.Name = "frmEditCase"
         Me.Text = "edit case"
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.MenuStrip1.ResumeLayout(False)
-        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -381,21 +463,26 @@ Partial Class frmEditCase
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txtDescription As TextBox
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents txtTitle As TextBox
+    Friend WithEvents txtLawyerID As TextBox
+    Friend WithEvents comboCaseType As ComboBox
+    Friend WithEvents btnSave As Button
     Friend WithEvents PictureBox5 As PictureBox
     Friend WithEvents Label10 As Label
     Friend WithEvents Label11 As Label
-    Friend WithEvents MenuStrip1 As MenuStrip
-    Friend WithEvents HomeToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ServeToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ContactToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents LoginToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents comboStatement As ComboBox
+    Friend WithEvents txtEmail As TextBox
+    Friend WithEvents Label12 As Label
+    Friend WithEvents txtRemainingCost As TextBox
+    Friend WithEvents Label13 As Label
+    Friend WithEvents Label14 As Label
+    Friend WithEvents txtPaidCost As TextBox
+    Friend WithEvents btnDownloadDoc As Button
+    Friend WithEvents btnuploadDoc As Button
+    Friend WithEvents btnAddSession As Button
+    Friend WithEvents txtDecision As TextBox
+    Friend WithEvents btnBack As Button
 End Class

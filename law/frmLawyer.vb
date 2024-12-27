@@ -17,7 +17,7 @@ Public Class frmLawyer
         Try
             cmd = con.CreateCommand()
             cmd.CommandType = CommandType.Text
-            cmd.CommandText = "select Case_ID, Client_ID from [Case] where Lawyer_ID = " & x & ""
+            cmd.CommandText = "select Case_Title, Client_ID from [Case] where Lawyer_ID = " & x & ""
             cmd.ExecuteNonQuery()
             Dim dt As New DataTable()
             Dim da As New SqlDataAdapter(cmd)
@@ -91,11 +91,11 @@ Public Class frmLawyer
         End Try
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
         GroupBox1.Enabled = True
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs)
         If con.State = ConnectionState.Open Then
             con.Close()
         End If
@@ -113,4 +113,5 @@ Public Class frmLawyer
         frmEditCase.Show()
         Me.Hide()
     End Sub
+
 End Class
