@@ -14,17 +14,18 @@ Public Class frmLawyer
         GroupBox1.Enabled = False
     End Sub
     Public Sub displayData()
+
         Try
             cmd = con.CreateCommand()
             cmd.CommandType = CommandType.Text
-            cmd.CommandText = "select Case_Title, Client_ID from [Case] where Lawyer_ID = " & x & ""
+            cmd.CommandText = "select Case_ID, Title, Client_ID from [Case] where Lawyer_ID = " & x & ""
             cmd.ExecuteNonQuery()
             Dim dt As New DataTable()
             Dim da As New SqlDataAdapter(cmd)
             da.Fill(dt)
             DataGridView1.DataSource = dt
         Catch ex As Exception
-            MessageBox.Show("An Error Occurred When Data Load.")
+            MessageBox.Show("Error in frmLawyer in line 28")
         End Try
     End Sub
     Public Sub fillForm(name As String, email As String, phone As String, birthdate As String, nationality As String, address As String, role As String, lawyerID As String, password As String)
@@ -36,6 +37,8 @@ Public Class frmLawyer
         lblRole.Text = lblRole.Tag + role
         lblNationality.Text = lblNationality.Tag + nationality
         lblLawyerID.Text = lblLawyerID.Tag + lawyerID
+
+        frmAddCase.LawyerID = lawyerID
 
         frmUpdatePassword.oldPassword = password
         frmUpdatePassword.SignedInID = lawyerID
@@ -58,6 +61,7 @@ Public Class frmLawyer
     End Sub
 
     Private Sub NewCaseToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewCaseToolStripMenuItem.Click
+        frmAddCase.PreviousForm = "L"
         frmAddCase.Show()
         Me.Hide()
     End Sub
@@ -70,6 +74,7 @@ Public Class frmLawyer
             End If
             con.Open()
             i = Convert.ToInt32(DataGridView1.SelectedCells.Item(0).Value.ToString())
+
             cmd = con.CreateCommand()
             cmd.CommandType = CommandType.Text
             cmd.CommandText = "select client_Id, case_ID, description, Cost_Paid, Remaining_Costs, Decision from [Case] where Case_ID = " & i & ""
@@ -112,6 +117,14 @@ Public Class frmLawyer
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        frmEditCase.PreviousForm = "L"
+        cmd = con.CreateCommand()
+        cmd.CommandType = CommandType.Text
+        cmd.CommandText = "select * from [case] where case_id = '" + i + "'"
+        cmd.ExecuteNonQuery()
+        frmEditCase.fillForm()
+
+
         frmEditCase.Show()
         Me.Hide()
     End Sub

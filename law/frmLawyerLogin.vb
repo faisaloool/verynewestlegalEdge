@@ -52,7 +52,7 @@ Public Class frmLawyerLogin
             End If
 
         Catch ex As Exception
-            MessageBox.Show("An Error Occurredxxx")
+            MessageBox.Show("Error in frmLawyerLogin line 55")
         End Try
     End Sub
 

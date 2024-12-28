@@ -58,6 +58,8 @@ Partial Class frmEditCase
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.txtClientID = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label16 = New System.Windows.Forms.Label()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -228,7 +230,7 @@ Partial Class frmEditCase
         Me.txtLawyerID.Name = "txtLawyerID"
         Me.txtLawyerID.Size = New System.Drawing.Size(295, 17)
         Me.txtLawyerID.TabIndex = 22
-        Me.txtLawyerID.Text = "1"
+        Me.txtLawyerID.Text = "2005"
         '
         'comboCaseType
         '
@@ -423,7 +425,7 @@ Partial Class frmEditCase
         '
         'txtSelectedFilePath
         '
-        Me.txtSelectedFilePath.Location = New System.Drawing.Point(12, 527)
+        Me.txtSelectedFilePath.Location = New System.Drawing.Point(15, 463)
         Me.txtSelectedFilePath.Name = "txtSelectedFilePath"
         Me.txtSelectedFilePath.Size = New System.Drawing.Size(320, 24)
         Me.txtSelectedFilePath.TabIndex = 41
@@ -456,12 +458,38 @@ Partial Class frmEditCase
         Me.Label15.TabIndex = 42
         Me.Label15.Text = "Client ID"
         '
+        'TextBox1
+        '
+        Me.TextBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(137, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(114, Byte), Integer))
+        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox1.Font = New System.Drawing.Font("Lucida Fax", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.ForeColor = System.Drawing.Color.White
+        Me.TextBox1.Location = New System.Drawing.Point(598, 423)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(82, 17)
+        Me.TextBox1.TabIndex = 45
+        Me.TextBox1.Text = "1"
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Font = New System.Drawing.Font("Lucida Fax", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(199, Byte), Integer))
+        Me.Label16.Location = New System.Drawing.Point(504, 423)
+        Me.Label16.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(62, 16)
+        Me.Label16.TabIndex = 44
+        Me.Label16.Text = "Case ID"
+        '
         'frmEditCase
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(985, 578)
+        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.Label16)
         Me.Controls.Add(Me.txtClientID)
         Me.Controls.Add(Me.Label15)
         Me.Controls.Add(Me.txtSelectedFilePath)
@@ -540,4 +568,6 @@ Partial Class frmEditCase
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
     Friend WithEvents txtClientID As TextBox
     Friend WithEvents Label15 As Label
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Label16 As Label
 End Class
