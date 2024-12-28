@@ -33,8 +33,8 @@ Partial Class frmEditCase
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.txtDescription = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.txtStartDate = New System.Windows.Forms.TextBox()
+        Me.txtEndDate = New System.Windows.Forms.TextBox()
         Me.txtTitle = New System.Windows.Forms.TextBox()
         Me.txtLawyerID = New System.Windows.Forms.TextBox()
         Me.comboCaseType = New System.Windows.Forms.ComboBox()
@@ -54,6 +54,10 @@ Partial Class frmEditCase
         Me.txtDecision = New System.Windows.Forms.TextBox()
         Me.btnBack = New System.Windows.Forms.Button()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
+        Me.txtSelectedFilePath = New System.Windows.Forms.TextBox()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.txtClientID = New System.Windows.Forms.TextBox()
+        Me.Label15 = New System.Windows.Forms.Label()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -176,28 +180,31 @@ Partial Class frmEditCase
         Me.txtDescription.Name = "txtDescription"
         Me.txtDescription.Size = New System.Drawing.Size(523, 74)
         Me.txtDescription.TabIndex = 16
+        Me.txtDescription.Text = "meow"
         '
-        'TextBox3
+        'txtStartDate
         '
-        Me.TextBox3.BackColor = System.Drawing.Color.FromArgb(CType(CType(137, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(114, Byte), Integer))
-        Me.TextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox3.Font = New System.Drawing.Font("Lucida Fax", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.ForeColor = System.Drawing.Color.White
-        Me.TextBox3.Location = New System.Drawing.Point(170, 210)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(295, 17)
-        Me.TextBox3.TabIndex = 18
+        Me.txtStartDate.BackColor = System.Drawing.Color.FromArgb(CType(CType(137, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(114, Byte), Integer))
+        Me.txtStartDate.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtStartDate.Font = New System.Drawing.Font("Lucida Fax", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtStartDate.ForeColor = System.Drawing.Color.White
+        Me.txtStartDate.Location = New System.Drawing.Point(170, 210)
+        Me.txtStartDate.Name = "txtStartDate"
+        Me.txtStartDate.Size = New System.Drawing.Size(295, 17)
+        Me.txtStartDate.TabIndex = 18
+        Me.txtStartDate.Text = "18/1/2000"
         '
-        'TextBox4
+        'txtEndDate
         '
-        Me.TextBox4.BackColor = System.Drawing.Color.FromArgb(CType(CType(137, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(114, Byte), Integer))
-        Me.TextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox4.Font = New System.Drawing.Font("Lucida Fax", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.ForeColor = System.Drawing.Color.White
-        Me.TextBox4.Location = New System.Drawing.Point(170, 251)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(295, 17)
-        Me.TextBox4.TabIndex = 19
+        Me.txtEndDate.BackColor = System.Drawing.Color.FromArgb(CType(CType(137, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(114, Byte), Integer))
+        Me.txtEndDate.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtEndDate.Font = New System.Drawing.Font("Lucida Fax", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtEndDate.ForeColor = System.Drawing.Color.White
+        Me.txtEndDate.Location = New System.Drawing.Point(170, 251)
+        Me.txtEndDate.Name = "txtEndDate"
+        Me.txtEndDate.Size = New System.Drawing.Size(295, 17)
+        Me.txtEndDate.TabIndex = 19
+        Me.txtEndDate.Text = "18/2/2000"
         '
         'txtTitle
         '
@@ -209,6 +216,7 @@ Partial Class frmEditCase
         Me.txtTitle.Name = "txtTitle"
         Me.txtTitle.Size = New System.Drawing.Size(295, 17)
         Me.txtTitle.TabIndex = 21
+        Me.txtTitle.Text = "murder"
         '
         'txtLawyerID
         '
@@ -220,6 +228,7 @@ Partial Class frmEditCase
         Me.txtLawyerID.Name = "txtLawyerID"
         Me.txtLawyerID.Size = New System.Drawing.Size(295, 17)
         Me.txtLawyerID.TabIndex = 22
+        Me.txtLawyerID.Text = "1"
         '
         'comboCaseType
         '
@@ -283,6 +292,7 @@ Partial Class frmEditCase
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.Size = New System.Drawing.Size(295, 17)
         Me.txtEmail.TabIndex = 31
+        Me.txtEmail.Text = "albabafaisal81@gmail.com"
         '
         'Label12
         '
@@ -306,6 +316,7 @@ Partial Class frmEditCase
         Me.txtRemainingCost.Name = "txtRemainingCost"
         Me.txtRemainingCost.Size = New System.Drawing.Size(101, 17)
         Me.txtRemainingCost.TabIndex = 33
+        Me.txtRemainingCost.Text = "1000"
         '
         'Label13
         '
@@ -341,6 +352,7 @@ Partial Class frmEditCase
         Me.txtPaidCost.Name = "txtPaidCost"
         Me.txtPaidCost.Size = New System.Drawing.Size(101, 17)
         Me.txtPaidCost.TabIndex = 35
+        Me.txtPaidCost.Text = "100"
         '
         'btnDownloadDoc
         '
@@ -386,6 +398,7 @@ Partial Class frmEditCase
         Me.txtDecision.Name = "txtDecision"
         Me.txtDecision.Size = New System.Drawing.Size(772, 74)
         Me.txtDecision.TabIndex = 39
+        Me.txtDecision.Text = "meow judge"
         '
         'btnBack
         '
@@ -408,12 +421,50 @@ Partial Class frmEditCase
         Me.PictureBox5.TabIndex = 27
         Me.PictureBox5.TabStop = False
         '
+        'txtSelectedFilePath
+        '
+        Me.txtSelectedFilePath.Location = New System.Drawing.Point(12, 527)
+        Me.txtSelectedFilePath.Name = "txtSelectedFilePath"
+        Me.txtSelectedFilePath.Size = New System.Drawing.Size(320, 24)
+        Me.txtSelectedFilePath.TabIndex = 41
+        '
+        'OpenFileDialog1
+        '
+        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        '
+        'txtClientID
+        '
+        Me.txtClientID.BackColor = System.Drawing.Color.FromArgb(CType(CType(137, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(114, Byte), Integer))
+        Me.txtClientID.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtClientID.Font = New System.Drawing.Font("Lucida Fax", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtClientID.ForeColor = System.Drawing.Color.White
+        Me.txtClientID.Location = New System.Drawing.Point(598, 397)
+        Me.txtClientID.Name = "txtClientID"
+        Me.txtClientID.Size = New System.Drawing.Size(82, 17)
+        Me.txtClientID.TabIndex = 43
+        Me.txtClientID.Text = "1"
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("Lucida Fax", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(199, Byte), Integer))
+        Me.Label15.Location = New System.Drawing.Point(504, 397)
+        Me.Label15.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(72, 16)
+        Me.Label15.TabIndex = 42
+        Me.Label15.Text = "Client ID"
+        '
         'frmEditCase
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(985, 578)
+        Me.Controls.Add(Me.txtClientID)
+        Me.Controls.Add(Me.Label15)
+        Me.Controls.Add(Me.txtSelectedFilePath)
         Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.txtDecision)
         Me.Controls.Add(Me.btnAddSession)
@@ -433,8 +484,8 @@ Partial Class frmEditCase
         Me.Controls.Add(Me.comboCaseType)
         Me.Controls.Add(Me.txtLawyerID)
         Me.Controls.Add(Me.txtTitle)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.TextBox3)
+        Me.Controls.Add(Me.txtEndDate)
+        Me.Controls.Add(Me.txtStartDate)
         Me.Controls.Add(Me.txtDescription)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label8)
@@ -464,8 +515,8 @@ Partial Class frmEditCase
     Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents txtDescription As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents txtStartDate As TextBox
+    Friend WithEvents txtEndDate As TextBox
     Friend WithEvents txtTitle As TextBox
     Friend WithEvents txtLawyerID As TextBox
     Friend WithEvents comboCaseType As ComboBox
@@ -485,4 +536,8 @@ Partial Class frmEditCase
     Friend WithEvents btnAddSession As Button
     Friend WithEvents txtDecision As TextBox
     Friend WithEvents btnBack As Button
+    Friend WithEvents txtSelectedFilePath As TextBox
+    Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents txtClientID As TextBox
+    Friend WithEvents Label15 As Label
 End Class

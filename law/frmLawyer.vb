@@ -39,6 +39,7 @@ Public Class frmLawyer
 
         frmUpdatePassword.oldPassword = password
         frmUpdatePassword.SignedInID = lawyerID
+        frmEditCase.LawyerID = lawyerID
     End Sub
 
     Private Sub ChangePasswordToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ChangePasswordToolStripMenuItem.Click
@@ -81,6 +82,7 @@ Public Class frmLawyer
             While dr.Read
                 TextBox1.Text = dr.GetInt32(0).ToString()
                 TextBox2.Text = dr.GetInt32(1).ToString()
+                frmEditCase.CASEID = TextBox2.Text
                 TextBox3.Text = dr.GetString(2).ToString()
                 TextBox4.Text = dr.GetString(3).ToString()
                 TextBox5.Text = dr.GetString(4).ToString()
