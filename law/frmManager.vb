@@ -4,6 +4,8 @@ Public Class frmManager
     Dim cmd As New SqlCommand
     Dim i As Int32
     Public x As String
+    Public vLawyerID As String
+
 
 
     Private Sub frmManager_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -128,5 +130,65 @@ Public Class frmManager
 
         frmEditCase.Show()
         Me.Hide()
+    End Sub
+
+    Private Sub AllSessionsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AllSessionsToolStripMenuItem.Click
+        Try
+            If con.State = ConnectionState.Open Then
+                con.Close()
+            End If
+            con.Open()
+
+            cmd = con.CreateCommand()
+            cmd.CommandType = CommandType.Text
+
+            cmd.CommandText = "SELECT * FROM [Session]"
+
+            cmd.ExecuteNonQuery()
+            Dim dt As New DataTable()
+            Dim da As New SqlDataAdapter(cmd)
+            da.Fill(dt)
+            frmShowSessions.DataGridView1.DataSource = dt
+            frmShowSessions.lRole = "M"
+            frmShowSessions.Show()
+            Me.Hide()
+
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub MySessionsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MySessionsToolStripMenuItem.Click
+        Try
+            If con.State = ConnectionState.Open Then
+                con.Close()
+            End If
+            con.Open()
+
+            cmd = con.CreateCommand()
+            cmd.CommandType = CommandType.Text
+
+            cmd.CommandText = "SELECT s.* FROM [Session] s JOIN [Case] c ON s.Case_ID = c.Case_ID WHERE c.Lawyer_ID = " & x & ""
+
+            cmd.ExecuteNonQuery()
+            Dim dt As New DataTable()
+            Dim da As New SqlDataAdapter(cmd)
+            da.Fill(dt)
+            frmShowSessions.DataGridView1.DataSource = dt
+            frmShowSessions.lRole = "M"
+            frmShowSessions.Show()
+            Me.Hide()
+
+        Catch ex As Exception
+
+        End Try
+
+    End Sub
+
+    Private Sub NewSessionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewSessionToolStripMenuItem.Click
+        Form6.PreviousForm = "M"
+        Form6.Show()
+        Me.Hide()
+
     End Sub
 End Class

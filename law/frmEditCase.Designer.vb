@@ -382,7 +382,7 @@ Partial Class frmEditCase
         '
         Me.btnAddSession.BackColor = System.Drawing.Color.Black
         Me.btnAddSession.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnAddSession.Location = New System.Drawing.Point(834, 385)
+        Me.btnAddSession.Location = New System.Drawing.Point(834, 3850)
         Me.btnAddSession.Name = "btnAddSession"
         Me.btnAddSession.Size = New System.Drawing.Size(108, 51)
         Me.btnAddSession.TabIndex = 38

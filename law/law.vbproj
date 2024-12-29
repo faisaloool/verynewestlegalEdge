@@ -127,10 +127,10 @@
     <Compile Include="Form6.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form7.Designer.vb">
-      <DependentUpon>Form7.vb</DependentUpon>
+    <Compile Include="frmShowSessions.Designer.vb">
+      <DependentUpon>frmShowSessions.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form7.vb">
+    <Compile Include="frmShowSessions.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmServices.vb">
@@ -259,8 +259,8 @@
     <EmbeddedResource Include="Form6.resx">
       <DependentUpon>Form6.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form7.resx">
-      <DependentUpon>Form7.vb</DependentUpon>
+    <EmbeddedResource Include="frmShowSessions.resx">
+      <DependentUpon>frmShowSessions.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmServices.resx">
       <DependentUpon>frmServices.vb</DependentUpon>

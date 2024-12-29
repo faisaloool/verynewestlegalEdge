@@ -78,6 +78,7 @@ Partial Class frmManager
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
+        Me.NewSessionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -374,18 +375,18 @@ Partial Class frmManager
         'LogoutToolStripMenuItem
         '
         Me.LogoutToolStripMenuItem.Name = "LogoutToolStripMenuItem"
-        Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(179, 22)
         Me.LogoutToolStripMenuItem.Text = "Logout"
         '
         'ChangePasswordToolStripMenuItem
         '
         Me.ChangePasswordToolStripMenuItem.Name = "ChangePasswordToolStripMenuItem"
-        Me.ChangePasswordToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ChangePasswordToolStripMenuItem.Size = New System.Drawing.Size(179, 22)
         Me.ChangePasswordToolStripMenuItem.Text = "Change Password"
         '
         'AddToolStripMenuItem
         '
-        Me.AddToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewCaseToolStripMenuItem, Me.NewClientToolStripMenuItem, Me.NewLawyerToolStripMenuItem})
+        Me.AddToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewCaseToolStripMenuItem, Me.NewClientToolStripMenuItem, Me.NewLawyerToolStripMenuItem, Me.NewSessionToolStripMenuItem})
         Me.AddToolStripMenuItem.Font = New System.Drawing.Font("Lucida Bright", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.AddToolStripMenuItem.Name = "AddToolStripMenuItem"
         Me.AddToolStripMenuItem.Size = New System.Drawing.Size(44, 22)
@@ -394,19 +395,19 @@ Partial Class frmManager
         'NewCaseToolStripMenuItem
         '
         Me.NewCaseToolStripMenuItem.Name = "NewCaseToolStripMenuItem"
-        Me.NewCaseToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.NewCaseToolStripMenuItem.Size = New System.Drawing.Size(142, 22)
         Me.NewCaseToolStripMenuItem.Text = "New Case"
         '
         'NewClientToolStripMenuItem
         '
         Me.NewClientToolStripMenuItem.Name = "NewClientToolStripMenuItem"
-        Me.NewClientToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.NewClientToolStripMenuItem.Size = New System.Drawing.Size(142, 22)
         Me.NewClientToolStripMenuItem.Text = "New Client"
         '
         'NewLawyerToolStripMenuItem
         '
         Me.NewLawyerToolStripMenuItem.Name = "NewLawyerToolStripMenuItem"
-        Me.NewLawyerToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.NewLawyerToolStripMenuItem.Size = New System.Drawing.Size(142, 22)
         Me.NewLawyerToolStripMenuItem.Text = "New Lawyer"
         '
         'ViewToolStripMenuItem
@@ -431,25 +432,25 @@ Partial Class frmManager
         'MyPreviousCasesToolStripMenuItem
         '
         Me.MyPreviousCasesToolStripMenuItem.Name = "MyPreviousCasesToolStripMenuItem"
-        Me.MyPreviousCasesToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.MyPreviousCasesToolStripMenuItem.Size = New System.Drawing.Size(197, 22)
         Me.MyPreviousCasesToolStripMenuItem.Text = "My Previous Cases"
         '
         'AllPreviousCasesToolStripMenuItem
         '
         Me.AllPreviousCasesToolStripMenuItem.Name = "AllPreviousCasesToolStripMenuItem"
-        Me.AllPreviousCasesToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AllPreviousCasesToolStripMenuItem.Size = New System.Drawing.Size(197, 22)
         Me.AllPreviousCasesToolStripMenuItem.Text = "All Previous Cases"
         '
         'MyCurrentCasesToolStripMenuItem
         '
         Me.MyCurrentCasesToolStripMenuItem.Name = "MyCurrentCasesToolStripMenuItem"
-        Me.MyCurrentCasesToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.MyCurrentCasesToolStripMenuItem.Size = New System.Drawing.Size(197, 22)
         Me.MyCurrentCasesToolStripMenuItem.Text = "My Current Cases"
         '
         'AllCurrentCasesToolStripMenuItem
         '
         Me.AllCurrentCasesToolStripMenuItem.Name = "AllCurrentCasesToolStripMenuItem"
-        Me.AllCurrentCasesToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AllCurrentCasesToolStripMenuItem.Size = New System.Drawing.Size(197, 22)
         Me.AllCurrentCasesToolStripMenuItem.Text = "All Current Cases"
         '
         'lblRole
@@ -660,6 +661,12 @@ Partial Class frmManager
         Me.Label8.Tag = ""
         Me.Label8.Text = "Case ID"
         '
+        'NewSessionToolStripMenuItem
+        '
+        Me.NewSessionToolStripMenuItem.Name = "NewSessionToolStripMenuItem"
+        Me.NewSessionToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.NewSessionToolStripMenuItem.Text = "New Session"
+        '
         'frmManager
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -771,4 +778,5 @@ Partial Class frmManager
     Friend WithEvents Label3 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label8 As Label
+    Friend WithEvents NewSessionToolStripMenuItem As ToolStripMenuItem
 End Class

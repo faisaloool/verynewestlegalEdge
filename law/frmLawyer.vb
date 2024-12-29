@@ -140,4 +140,35 @@ Public Class frmLawyer
         Me.Hide()
     End Sub
 
+    Private Sub SessionsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SessionsToolStripMenuItem.Click
+        Try
+            If con.State = ConnectionState.Open Then
+                con.Close()
+            End If
+            con.Open()
+
+            cmd = con.CreateCommand()
+            cmd.CommandType = CommandType.Text
+
+            cmd.CommandText = "SELECT s.* FROM [Session] s JOIN [Case] c ON s.Case_ID = c.Case_ID WHERE c.Lawyer_ID = " & x & ""
+
+            cmd.ExecuteNonQuery()
+            Dim dt As New DataTable()
+            Dim da As New SqlDataAdapter(cmd)
+            da.Fill(dt)
+            frmShowSessions.DataGridView1.DataSource = dt
+            frmShowSessions.lRole = "L"
+            frmShowSessions.Show()
+            Me.Hide()
+
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub NewSessionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewSessionToolStripMenuItem.Click
+        Form6.PreviousForm = "L"
+        Form6.Show()
+        Me.Hide()
+    End Sub
 End Class

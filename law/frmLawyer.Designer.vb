@@ -35,7 +35,6 @@ Partial Class frmLawyer
         Me.NewClientToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MySessionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SessionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PreviousCasesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CurrentCasesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lblName = New System.Windows.Forms.Label()
@@ -73,6 +72,7 @@ Partial Class frmLawyer
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.NewSessionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -144,7 +144,7 @@ Partial Class frmLawyer
         '
         'AddToolStripMenuItem
         '
-        Me.AddToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewCaseToolStripMenuItem, Me.NewClientToolStripMenuItem})
+        Me.AddToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewCaseToolStripMenuItem, Me.NewClientToolStripMenuItem, Me.NewSessionToolStripMenuItem})
         Me.AddToolStripMenuItem.Font = New System.Drawing.Font("Lucida Bright", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.AddToolStripMenuItem.Name = "AddToolStripMenuItem"
         Me.AddToolStripMenuItem.Size = New System.Drawing.Size(44, 22)
@@ -164,7 +164,7 @@ Partial Class frmLawyer
         '
         'MySessionsToolStripMenuItem
         '
-        Me.MySessionsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SessionsToolStripMenuItem, Me.PreviousCasesToolStripMenuItem, Me.CurrentCasesToolStripMenuItem})
+        Me.MySessionsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SessionsToolStripMenuItem, Me.CurrentCasesToolStripMenuItem})
         Me.MySessionsToolStripMenuItem.Name = "MySessionsToolStripMenuItem"
         Me.MySessionsToolStripMenuItem.Size = New System.Drawing.Size(44, 22)
         Me.MySessionsToolStripMenuItem.Text = "View"
@@ -172,19 +172,13 @@ Partial Class frmLawyer
         'SessionsToolStripMenuItem
         '
         Me.SessionsToolStripMenuItem.Name = "SessionsToolStripMenuItem"
-        Me.SessionsToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
-        Me.SessionsToolStripMenuItem.Text = "Upcoming Sessions"
-        '
-        'PreviousCasesToolStripMenuItem
-        '
-        Me.PreviousCasesToolStripMenuItem.Name = "PreviousCasesToolStripMenuItem"
-        Me.PreviousCasesToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
-        Me.PreviousCasesToolStripMenuItem.Text = "Previous Cases"
+        Me.SessionsToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.SessionsToolStripMenuItem.Text = "My Sessions"
         '
         'CurrentCasesToolStripMenuItem
         '
         Me.CurrentCasesToolStripMenuItem.Name = "CurrentCasesToolStripMenuItem"
-        Me.CurrentCasesToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
+        Me.CurrentCasesToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.CurrentCasesToolStripMenuItem.Text = "Current Cases"
         '
         'Label1
@@ -620,6 +614,12 @@ Partial Class frmLawyer
         Me.PictureBox1.TabIndex = 2
         Me.PictureBox1.TabStop = False
         '
+        'NewSessionToolStripMenuItem
+        '
+        Me.NewSessionToolStripMenuItem.Name = "NewSessionToolStripMenuItem"
+        Me.NewSessionToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.NewSessionToolStripMenuItem.Text = "New Session"
+        '
         'frmLawyer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -723,6 +723,6 @@ Partial Class frmLawyer
     Friend WithEvents Button3 As Button
     Friend WithEvents MySessionsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SessionsToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents PreviousCasesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CurrentCasesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents NewSessionToolStripMenuItem As ToolStripMenuItem
 End Class
