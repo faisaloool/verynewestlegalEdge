@@ -15,6 +15,6 @@
     End Sub
 
     Private Sub frmHome_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'SendEMessage()
+        SendEMessage()
     End Sub
 End Class
