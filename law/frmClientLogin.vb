@@ -25,16 +25,25 @@ Public Class frmClientLogin
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
         Try
+            If con.State = ConnectionState.Open Then
+                con.Close()
+            End If
+            con.Open()
             cmd = con.CreateCommand()
             cmd.CommandType = CommandType.Text
             cmd.CommandText = "select * from Client where National_ID = '" & TextBox1.Text & "' and Password = '" & TextBox2.Text & "'"
             Dim reader As SqlDataReader = cmd.ExecuteReader()
             If reader.HasRows Then
-                MessageBox.Show("Login Successfully")
-                frmClient.Show()
                 reader.Read()
                 frmClient.fillForm(reader("Name").ToString, reader("Email").ToString, reader("Phone_Number").ToString, reader("Birthdate").ToString, reader("Nationality").ToString, reader("Address").ToString, reader("National_ID").ToString)
+                frmClient.x = reader("Client_Id")
+
+                MessageBox.Show("Login Successfully")
+                frmClient.Show()
+
+
 
                 Me.Close()
             Else
