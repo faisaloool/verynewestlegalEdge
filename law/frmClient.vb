@@ -16,6 +16,6 @@ Public Class frmClient
 
     Private Sub LogoutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LogoutToolStripMenuItem.Click
         frmHome.Show()
-        Me.Hide()
+        Me.Close()
     End Sub
 End Class

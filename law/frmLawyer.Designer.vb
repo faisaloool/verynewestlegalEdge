@@ -34,6 +34,9 @@ Partial Class frmLawyer
         Me.NewCaseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NewClientToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MySessionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SessionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PreviousCasesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CurrentCasesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lblName = New System.Windows.Forms.Label()
         Me.lblEmail = New System.Windows.Forms.Label()
@@ -59,9 +62,6 @@ Partial Class frmLawyer
         Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Button3 = New System.Windows.Forms.Button()
-        Me.SessionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PreviousCasesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CurrentCasesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PictureBox11 = New System.Windows.Forms.PictureBox()
         Me.PictureBox9 = New System.Windows.Forms.PictureBox()
         Me.PictureBox10 = New System.Windows.Forms.PictureBox()
@@ -168,6 +168,24 @@ Partial Class frmLawyer
         Me.MySessionsToolStripMenuItem.Name = "MySessionsToolStripMenuItem"
         Me.MySessionsToolStripMenuItem.Size = New System.Drawing.Size(44, 22)
         Me.MySessionsToolStripMenuItem.Text = "View"
+        '
+        'SessionsToolStripMenuItem
+        '
+        Me.SessionsToolStripMenuItem.Name = "SessionsToolStripMenuItem"
+        Me.SessionsToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
+        Me.SessionsToolStripMenuItem.Text = "Upcoming Sessions"
+        '
+        'PreviousCasesToolStripMenuItem
+        '
+        Me.PreviousCasesToolStripMenuItem.Name = "PreviousCasesToolStripMenuItem"
+        Me.PreviousCasesToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
+        Me.PreviousCasesToolStripMenuItem.Text = "Previous Cases"
+        '
+        'CurrentCasesToolStripMenuItem
+        '
+        Me.CurrentCasesToolStripMenuItem.Name = "CurrentCasesToolStripMenuItem"
+        Me.CurrentCasesToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
+        Me.CurrentCasesToolStripMenuItem.Text = "Current Cases"
         '
         'Label1
         '
@@ -311,6 +329,7 @@ Partial Class frmLawyer
         '
         Me.TextBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(137, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(114, Byte), Integer))
         Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.ForeColor = System.Drawing.Color.White
         Me.TextBox1.Location = New System.Drawing.Point(130, 11)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(100, 20)
@@ -320,6 +339,7 @@ Partial Class frmLawyer
         '
         Me.TextBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(137, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(114, Byte), Integer))
         Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox2.ForeColor = System.Drawing.Color.White
         Me.TextBox2.Location = New System.Drawing.Point(130, 66)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(100, 20)
@@ -329,6 +349,7 @@ Partial Class frmLawyer
         '
         Me.TextBox3.BackColor = System.Drawing.Color.FromArgb(CType(CType(137, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(114, Byte), Integer))
         Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox3.ForeColor = System.Drawing.Color.White
         Me.TextBox3.Location = New System.Drawing.Point(130, 123)
         Me.TextBox3.Multiline = True
         Me.TextBox3.Name = "TextBox3"
@@ -339,6 +360,7 @@ Partial Class frmLawyer
         '
         Me.TextBox4.BackColor = System.Drawing.Color.FromArgb(CType(CType(137, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(114, Byte), Integer))
         Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox4.ForeColor = System.Drawing.Color.White
         Me.TextBox4.Location = New System.Drawing.Point(432, 11)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(100, 20)
@@ -348,6 +370,7 @@ Partial Class frmLawyer
         '
         Me.TextBox5.BackColor = System.Drawing.Color.FromArgb(CType(CType(137, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(114, Byte), Integer))
         Me.TextBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox5.ForeColor = System.Drawing.Color.White
         Me.TextBox5.Location = New System.Drawing.Point(432, 66)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(100, 20)
@@ -435,6 +458,7 @@ Partial Class frmLawyer
         '
         Me.TextBox6.BackColor = System.Drawing.Color.FromArgb(CType(CType(137, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(114, Byte), Integer))
         Me.TextBox6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox6.ForeColor = System.Drawing.Color.White
         Me.TextBox6.Location = New System.Drawing.Point(130, 239)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(402, 20)
@@ -474,24 +498,6 @@ Partial Class frmLawyer
         Me.Button3.TabIndex = 40
         Me.Button3.Text = "Edit Case"
         Me.Button3.UseVisualStyleBackColor = False
-        '
-        'SessionsToolStripMenuItem
-        '
-        Me.SessionsToolStripMenuItem.Name = "SessionsToolStripMenuItem"
-        Me.SessionsToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
-        Me.SessionsToolStripMenuItem.Text = "Upcoming Sessions"
-        '
-        'PreviousCasesToolStripMenuItem
-        '
-        Me.PreviousCasesToolStripMenuItem.Name = "PreviousCasesToolStripMenuItem"
-        Me.PreviousCasesToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
-        Me.PreviousCasesToolStripMenuItem.Text = "Previous Cases"
-        '
-        'CurrentCasesToolStripMenuItem
-        '
-        Me.CurrentCasesToolStripMenuItem.Name = "CurrentCasesToolStripMenuItem"
-        Me.CurrentCasesToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
-        Me.CurrentCasesToolStripMenuItem.Text = "Current Cases"
         '
         'PictureBox11
         '

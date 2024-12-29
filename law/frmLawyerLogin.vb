@@ -41,8 +41,10 @@ Public Class frmLawyerLogin
                     frmLawyer.Show()
                     Me.Close()
                 ElseIf reader("Role") = "Manager" Then
+                    frmManager.fillForm(reader("Name").ToString, reader("Email").ToString, reader("Phone_Number").ToString, reader("Birthdate").ToString, reader("Nationality").ToString, reader("Address").ToString, reader("Role").ToString, reader("Lawyer_ID").ToString, reader("Password").ToString)
+                    frmManager.x = reader("Lawyer_ID")
                     frmManager.Show()
-                    Me.Hide()
+                    Me.Close()
                 End If
 
 

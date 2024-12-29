@@ -25,7 +25,31 @@ Public Class frmEditCase
 
     End Sub
 
+    Private Sub DownloadFile()
+        '' Define the SQL connection and query
+        'If con.State = ConnectionState.Open Then
+        '    con.Close()
+        'End If
+        'con.Open()
 
+        'cmd = con.CreateCommand()
+        'cmd.CommandType = CommandType.Text
+
+        'cmd.CommandText = "SELECT file_data FROM [File] WHERE Id = @file_id"
+
+        'cmd.Parameters.AddWithValue("@file_id", 1) ' Example file_id
+
+
+        'Dim fileData As Byte() = CType(cmd.ExecuteScalar(), Byte())
+
+        '' Write the data to a temporary file
+        'Dim filePath As String = Path.Combine(Path.GetTempPath(), "DownloadedFile")
+        'File.WriteAllBytes(filePath, fileData)
+
+        '' Open the file
+        'Process.Start(filePath)
+
+    End Sub
     Private Sub frmEditCase_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         comboCaseType.Items.Clear()
         comboCaseType.Items.Add("Criminal")
@@ -43,12 +67,14 @@ Public Class frmEditCase
 
 
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
-        If PreviousForm = "Manager" Then
+        If PreviousForm = "M" Then
             frmManager.Show()
             Me.Close()
-        ElseIf PreviousForm = "Lawyer" Then
+        ElseIf PreviousForm = "L" Then
             frmLawyer.Show()
             Me.Close()
+        Else
+            MessageBox.Show("An Error Occured")
         End If
     End Sub
 
@@ -56,7 +82,7 @@ Public Class frmEditCase
         Try
 
             If OpenFileDialog1.ShowDialog() = DialogResult.OK Then
-                'txtSelectedFilePath.Text = OpenFileDialog1.FileName
+                txtSelectedFilePath.Text = OpenFileDialog1.FileName
                 If con.State = ConnectionState.Open Then
                     con.Close()
                 End If
@@ -90,26 +116,35 @@ Public Class frmEditCase
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
 
 
-        If con.State = ConnectionState.Open Then
-            con.Close()
-        End If
-        con.Open()
-
-
-        'the following code is to upload the rest of case attributes to table case
-        cmd = con.CreateCommand()
-        cmd.CommandType = CommandType.Text
-        Dim clientID As Int32 = Val(txtClientID.Text)
-        cmd.CommandText = "insert into [Case] values ('" & clientID & "', '" & LawyerID & "', '" + txtStartDate.Text + "', '" + txtEndDate.Text + "', '" + comboCaseType.Text + "', '" + txtDecision.Text + "', '" + txtDescription.Text + "', '" + txtPaidCost.Text + "', '" + txtRemainingCost.Text + "', '" + txtTitle.Text + "')"
-        cmd.ExecuteNonQuery()
-
-
         Try
+            If con.State = ConnectionState.Open Then
+                con.Close()
+            End If
+            con.Open()
 
 
+            'the following code is to upload the rest of case attributes to table case
+            cmd = con.CreateCommand()
+            cmd.CommandType = CommandType.Text
+            Dim clientID As Int32 = Val(txtClientID.Text)
+            cmd.CommandText = "update [Case] set Client_ID = '" & clientID & "', Lawyer_ID = '" & LawyerID & "', Start_Date = '" + txtStartDate.Text + "', End_Date = '" + txtEndDate.Text + "', Case_Type = '" + comboCaseType.Text + "', Decision = '" + txtDecision.Text + "', Description = '" + txtDescription.Text + "', Cost_Paid = '" + txtPaidCost.Text + "', Remaining_Costs = '" + txtRemainingCost.Text + "', Title = '" + txtTitle.Text + "' where Case_ID = " & CASEID & ""
+            cmd.ExecuteNonQuery()
 
+            frmLawyer.displayData()
+
+            MessageBox.Show("Upadated Successfully.")
+
+            If PreviousForm = "M" Then
+                frmManager.Show()
+                Me.Close()
+            ElseIf PreviousForm = "L" Then
+                frmLawyer.Show()
+                Me.Close()
+            Else
+                MessageBox.Show("An Error Occured")
+            End If
         Catch ex As Exception
-            MessageBox.Show("fuck you :)")
+            MessageBox.Show("Exception: " + ex.Message)
         End Try
 
     End Sub

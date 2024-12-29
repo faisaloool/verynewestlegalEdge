@@ -221,9 +221,7 @@
     <Compile Include="meow.Designer.vb">
       <DependentUpon>meow.vb</DependentUpon>
     </Compile>
-    <Compile Include="meow.vb">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="meow.vb" />
     <Compile Include="Module1.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">

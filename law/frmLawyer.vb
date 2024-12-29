@@ -25,7 +25,7 @@ Public Class frmLawyer
             da.Fill(dt)
             DataGridView1.DataSource = dt
         Catch ex As Exception
-            MessageBox.Show("Error in frmLawyer in line 28")
+            MessageBox.Show("Error in frmLawyer in line 0008")
         End Try
     End Sub
     Public Sub fillForm(name As String, email As String, phone As String, birthdate As String, nationality As String, address As String, role As String, lawyerID As String, password As String)
@@ -46,6 +46,7 @@ Public Class frmLawyer
     End Sub
 
     Private Sub ChangePasswordToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ChangePasswordToolStripMenuItem.Click
+        frmUpdatePassword.Role = "L"
         frmUpdatePassword.Show()
         Me.Hide()
     End Sub
@@ -56,6 +57,7 @@ Public Class frmLawyer
     End Sub
 
     Private Sub NewClientToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewClientToolStripMenuItem.Click
+        frmAddClient.PreviousForm = "L"
         frmAddClient.Show()
         Me.Hide()
     End Sub
@@ -93,6 +95,7 @@ Public Class frmLawyer
                 TextBox5.Text = dr.GetString(4).ToString()
                 TextBox6.Text = dr.GetString(5).ToString()
             End While
+            dr.Close()
         Catch ex As Exception
             MessageBox.Show("Please Click A Valid Row.")
         End Try
@@ -117,12 +120,20 @@ Public Class frmLawyer
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        If con.State = ConnectionState.Open Then
+            con.Close()
+        End If
+        con.Open()
         frmEditCase.PreviousForm = "L"
         cmd = con.CreateCommand()
         cmd.CommandType = CommandType.Text
-        cmd.CommandText = "select * from [case] where case_id = '" + i + "'"
-        cmd.ExecuteNonQuery()
-        frmEditCase.fillForm()
+        cmd.CommandText = "select * from [case] where Case_ID = " & i & ""
+        'cmd.ExecuteNonQuery()
+        Dim dr As SqlClient.SqlDataReader
+        dr = cmd.ExecuteReader(CommandBehavior.CloseConnection)
+        dr.Read()
+        frmEditCase.fillForm(dr("Description").ToString(), "meow", dr("Start_Date").ToString(), dr("End_Date").ToString(), dr("Decision").ToString(), dr("Case_Type").ToString(), dr("Remaining_Costs").ToString(), dr("Cost_Paid").ToString(), "meow", dr("Title").ToString(), dr("Lawyer_ID").ToString(), Convert.ToInt32(dr("Client_ID")))
+        dr.Close()
 
 
         frmEditCase.Show()

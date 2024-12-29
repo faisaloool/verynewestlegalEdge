@@ -41,7 +41,20 @@ Public Class frmAddCase
             cmd.CommandType = CommandType.Text
             Dim clientID As Int32 = Val(txtClientID.Text)
 
-            cmd.CommandText = "insert into [Case] values ('" & clientID & "', '" + Convert.ToString(txtLawyerID.Text) + "', '" + txtStartDate.Text + "', '" + txtEndDate.Text + "', '" + comboCaseType.Text + "', '" + txtDecision.Text + "', '" + txtDescription.Text + "', '" + txtPaidCost.Text + "', '" + txtRemainingCost.Text + "', '" + txtTitle.Text + "')"
+            cmd.CommandText = "insert into [Case] values ('" & txtClientID.Text & "', '" + Convert.ToString(txtLawyerID.Text) + "', '" + txtStartDate.Text + "', '" + txtEndDate.Text + "', '" + comboCaseType.Text + "', '" + txtDecision.Text + "', '" + txtDescription.Text + "', '" + txtPaidCost.Text + "', '" + txtRemainingCost.Text + "', '" + txtTitle.Text + "')"
+            cmd.ExecuteNonQuery()
+            MessageBox.Show("Case Inserted Successfully")
+
+            If PreviousForm = "L" Then
+                frmLawyer.Show()
+                Me.Close()
+            ElseIf PreviousForm = "M" Then
+                frmManager.Show()
+                Me.Close()
+            Else
+                MessageBox.Show("Error")
+            End If
+
 
         Catch ex As Exception
             MessageBox.Show("Error: " + ex.Message)

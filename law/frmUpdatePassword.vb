@@ -5,6 +5,7 @@ Public Class frmUpdatePassword
     Dim i As Int32
     Public SignedInID As String
     Public oldPassword As String
+    Public Role As String
 
     Private Sub frmUpdatePassword_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If con.State = ConnectionState.Open Then
@@ -26,8 +27,16 @@ Public Class frmUpdatePassword
                 cmd.ExecuteNonQuery()
             End If
             MessageBox.Show("Password Updated Successfully.")
-            frmLawyer.Show()
-            Me.Hide()
+            If Role = "L" Then
+                frmLawyer.Show()
+                Me.Close()
+            ElseIf Role = "M" Then
+                frmManager.Show()
+                Me.Close()
+            End If
+
+
+
         Catch ex As Exception
             MessageBox.Show("An Error Occurred")
         End Try

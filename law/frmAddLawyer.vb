@@ -10,12 +10,18 @@ Public Class frmAddLawyer
         con.Open()
     End Sub
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        cmd = con.CreateCommand()
-        cmd.CommandType = CommandType.Text
-        cmd.CommandText = "insert into lawyer values ('" + txtName.Text + "', '" + txtBirthdate.Text + "', '" + txtEmail.Text + "', '" + txtAddress.Text + "', '" + comboGender.Text + "', '" + txtPhone.Text + "', '" + comboRole.Text + "', '" + txtPassword.Text + "', '" + txtNationality.Text + "')"
-        cmd.ExecuteNonQuery()
-        MessageBox.Show("Lawyer Inserted Successfully")
+        Try
 
+            cmd = con.CreateCommand()
+            cmd.CommandType = CommandType.Text
+            cmd.CommandText = "insert into lawyer values ('" + txtName.Text + "', '" + txtBirthdate.Text + "', '" + txtEmail.Text + "', '" + txtAddress.Text + "', '" + comboGender.Text + "', '" + txtPhone.Text + "', '" + comboRole.Text + "', '" + txtPassword.Text + "', '" + txtNationality.Text + "')"
+            cmd.ExecuteNonQuery()
+            MessageBox.Show("Lawyer Inserted Successfully")
+            frmManager.Show()
+            Me.Close()
+        Catch ex As Exception
+
+        End Try
     End Sub
 
 End Class

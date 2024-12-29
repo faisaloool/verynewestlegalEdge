@@ -2,6 +2,7 @@
 Imports System.Data
 Public Class frmAddClient
     Dim cmd As New SqlCommand
+    Public PreviousForm As String
     Private Sub Form5_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         If con.State = ConnectionState.Open Then
@@ -18,8 +19,16 @@ Public Class frmAddClient
         cmd.CommandText = "insert into Client values ('" + txtName.Text + "', '" + txtBirthdate.Text + "', '" + txtEmail.Text + "', '" + txtAddress.Text + "', '" + comboGender.Text + "', '" + txtPhone.Text + "', '" + txtNationality.Text + "', '" + txtPassword.Text + "', '" + txtNationalIDNumber.Text + "')"
         cmd.ExecuteNonQuery()
         MessageBox.Show("Client Inserted Successfully")
-        frmLawyer.Show()
-        Me.Close()
+
+        If PreviousForm = "L" Then
+
+            frmLawyer.Show()
+            Me.Close()
+        ElseIf PreviousForm = "M" Then
+            frmManager.Show()
+            Me.Close()
+        End If
+
         'meow
     End Sub
 End Class

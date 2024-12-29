@@ -235,7 +235,7 @@ Partial Class frmEditCase
         'comboCaseType
         '
         Me.comboCaseType.BackColor = System.Drawing.Color.FromArgb(CType(CType(137, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(114, Byte), Integer))
-        Me.comboCaseType.ForeColor = System.Drawing.Color.Black
+        Me.comboCaseType.ForeColor = System.Drawing.Color.White
         Me.comboCaseType.FormattingEnabled = True
         Me.comboCaseType.Items.AddRange(New Object() {"Environmental"})
         Me.comboCaseType.Location = New System.Drawing.Point(170, 393)
@@ -276,7 +276,7 @@ Partial Class frmEditCase
         'comboStatement
         '
         Me.comboStatement.BackColor = System.Drawing.Color.FromArgb(CType(CType(137, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(114, Byte), Integer))
-        Me.comboStatement.ForeColor = System.Drawing.Color.Black
+        Me.comboStatement.ForeColor = System.Drawing.Color.White
         Me.comboStatement.FormattingEnabled = True
         Me.comboStatement.Items.AddRange(New Object() {"Environmental"})
         Me.comboStatement.Location = New System.Drawing.Point(170, 166)
@@ -433,6 +433,7 @@ Partial Class frmEditCase
         'OpenFileDialog1
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        Me.OpenFileDialog1.Title = "Upload A Document"
         '
         'txtClientID
         '
@@ -464,18 +465,18 @@ Partial Class frmEditCase
         Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TextBox1.Font = New System.Drawing.Font("Lucida Fax", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox1.ForeColor = System.Drawing.Color.White
-        Me.TextBox1.Location = New System.Drawing.Point(598, 423)
+        Me.TextBox1.Location = New System.Drawing.Point(124, 513)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(82, 17)
         Me.TextBox1.TabIndex = 45
-        Me.TextBox1.Text = "1"
+        Me.TextBox1.Text = "55"
         '
         'Label16
         '
         Me.Label16.AutoSize = True
         Me.Label16.Font = New System.Drawing.Font("Lucida Fax", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label16.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(199, Byte), Integer))
-        Me.Label16.Location = New System.Drawing.Point(504, 423)
+        Me.Label16.Location = New System.Drawing.Point(30, 513)
         Me.Label16.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(62, 16)

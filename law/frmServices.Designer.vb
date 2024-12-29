@@ -58,7 +58,7 @@ Partial Class frmServices
         Me.MenuStrip1.Location = New System.Drawing.Point(490, 7)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(4, 2, 0, 2)
-        Me.MenuStrip1.Size = New System.Drawing.Size(523, 33)
+        Me.MenuStrip1.Size = New System.Drawing.Size(403, 33)
         Me.MenuStrip1.TabIndex = 1
         Me.MenuStrip1.Text = "MenuStrip1"
         '
