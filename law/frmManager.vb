@@ -191,4 +191,8 @@ Public Class frmManager
         Me.Hide()
 
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        SendEMessage()
+    End Sub
 End Class
