@@ -175,4 +175,10 @@ Public Class frmLawyer
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
 
     End Sub
+
+    Private Sub CurrentCasesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CurrentCasesToolStripMenuItem.Click
+        Me.Hide()
+        Form4.Show()
+
+    End Sub
 End Class

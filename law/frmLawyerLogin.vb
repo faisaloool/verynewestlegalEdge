@@ -32,8 +32,6 @@ Public Class frmLawyerLogin
             cmd.CommandText = "select * from lawyer where Lawyer_ID = '" & TextBox1.Text & "' and password = '" & TextBox2.Text & "'"
             Dim reader As SqlDataReader = cmd.ExecuteReader()
             If reader.HasRows Then
-                MessageBox.Show("Login Successfully")
-
                 reader.Read()
                 CurrentUserID = reader("Lawyer_ID")
                 LoginStatus = 1
@@ -55,9 +53,8 @@ Public Class frmLawyerLogin
 
                 reader.Close()
             Else
-                    MessageBox.Show("Id / Password Are Incorrect.")
+                MessageBox.Show("Id / Password Are Incorrect.")
             End If
-
         Catch ex As Exception
             MessageBox.Show("Error in frmLawyerLogin line 55")
         End Try

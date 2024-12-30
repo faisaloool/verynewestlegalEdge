@@ -74,4 +74,10 @@ Public Class frmClient
             MessageBox.Show("Please Click A Valid Row.107")
         End Try
     End Sub
+
+    Private Sub PreviousCasesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PreviousCasesToolStripMenuItem.Click
+        Me.Hide()
+        Form4.Show()
+
+    End Sub
 End Class

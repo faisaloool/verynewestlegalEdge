@@ -153,19 +153,19 @@ Partial Class frmLawyer
         'NewCaseToolStripMenuItem
         '
         Me.NewCaseToolStripMenuItem.Name = "NewCaseToolStripMenuItem"
-        Me.NewCaseToolStripMenuItem.Size = New System.Drawing.Size(185, 26)
+        Me.NewCaseToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.NewCaseToolStripMenuItem.Text = "New Case"
         '
         'NewClientToolStripMenuItem
         '
         Me.NewClientToolStripMenuItem.Name = "NewClientToolStripMenuItem"
-        Me.NewClientToolStripMenuItem.Size = New System.Drawing.Size(185, 26)
+        Me.NewClientToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.NewClientToolStripMenuItem.Text = "New Client"
         '
         'NewSessionToolStripMenuItem
         '
         Me.NewSessionToolStripMenuItem.Name = "NewSessionToolStripMenuItem"
-        Me.NewSessionToolStripMenuItem.Size = New System.Drawing.Size(185, 26)
+        Me.NewSessionToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.NewSessionToolStripMenuItem.Text = "New Session"
         '
         'MySessionsToolStripMenuItem
@@ -178,14 +178,14 @@ Partial Class frmLawyer
         'SessionsToolStripMenuItem
         '
         Me.SessionsToolStripMenuItem.Name = "SessionsToolStripMenuItem"
-        Me.SessionsToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+        Me.SessionsToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.SessionsToolStripMenuItem.Text = "My Sessions"
         '
         'CurrentCasesToolStripMenuItem
         '
         Me.CurrentCasesToolStripMenuItem.Name = "CurrentCasesToolStripMenuItem"
-        Me.CurrentCasesToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
-        Me.CurrentCasesToolStripMenuItem.Text = "Current Cases"
+        Me.CurrentCasesToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.CurrentCasesToolStripMenuItem.Text = "Previous Cases"
         '
         'Label1
         '
@@ -310,7 +310,7 @@ Partial Class frmLawyer
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Location = New System.Drawing.Point(16, 421)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
@@ -323,7 +323,7 @@ Partial Class frmLawyer
         Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox1.ForeColor = System.Drawing.Color.White
         Me.TextBox1.Location = New System.Drawing.Point(173, 14)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(132, 23)
         Me.TextBox1.TabIndex = 24
@@ -334,7 +334,7 @@ Partial Class frmLawyer
         Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox2.ForeColor = System.Drawing.Color.White
         Me.TextBox2.Location = New System.Drawing.Point(173, 81)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(132, 23)
         Me.TextBox2.TabIndex = 26
@@ -345,7 +345,7 @@ Partial Class frmLawyer
         Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox3.ForeColor = System.Drawing.Color.White
         Me.TextBox3.Location = New System.Drawing.Point(173, 151)
-        Me.TextBox3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBox3.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox3.Multiline = True
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(535, 110)
@@ -357,7 +357,7 @@ Partial Class frmLawyer
         Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox4.ForeColor = System.Drawing.Color.White
         Me.TextBox4.Location = New System.Drawing.Point(576, 14)
-        Me.TextBox4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBox4.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(132, 23)
         Me.TextBox4.TabIndex = 28
@@ -368,7 +368,7 @@ Partial Class frmLawyer
         Me.TextBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox5.ForeColor = System.Drawing.Color.White
         Me.TextBox5.Location = New System.Drawing.Point(576, 81)
-        Me.TextBox5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBox5.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(132, 23)
         Me.TextBox5.TabIndex = 29
@@ -451,7 +451,7 @@ Partial Class frmLawyer
         Me.TextBox6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox6.ForeColor = System.Drawing.Color.White
         Me.TextBox6.Location = New System.Drawing.Point(173, 294)
-        Me.TextBox6.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBox6.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(535, 23)
         Me.TextBox6.TabIndex = 35
@@ -471,9 +471,9 @@ Partial Class frmLawyer
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Location = New System.Drawing.Point(356, 421)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Size = New System.Drawing.Size(709, 326)
         Me.GroupBox1.TabIndex = 39
         Me.GroupBox1.TabStop = False
