@@ -5,9 +5,12 @@ Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 Imports System.Globalization
 Module Module1
 
-    Public con As New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\albab\OneDrive\Desktop\the newest legaledge\Newest_LegalEdge-master (2)\Newest_LegalEdge-master\law\LegalEdgeDatabase.mdf;Integrated Security=True")
+    Public con As New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\USER\Documents\LegalEdgeDatabase.mdf;Integrated Security=True;Connect Timeout=30;Encrypt=False")
 
     Private cmd As New SqlCommand
+    Public CurrentUserID As New Integer
+    Public CurrentUserRole As String
+    Public LoginStatus As Integer = 0
 
     Function IsSessionTomorrow(sessionDate As String) As Boolean
         Dim todayDate As String = Date.Today.ToString("dd/MM/yyyy")

@@ -39,6 +39,9 @@ Public Class frmClientLogin
                 reader.Read()
                 frmClient.fillForm(reader("Name").ToString, reader("Email").ToString, reader("Phone_Number").ToString, reader("Birthdate").ToString, reader("Nationality").ToString, reader("Address").ToString, reader("National_ID").ToString)
                 frmClient.x = reader("Client_Id")
+                CurrentUserID = reader("Client_Id")
+                CurrentUserRole = "Client"
+                LoginStatus = 1
 
                 MessageBox.Show("Login Successfully")
                 frmClient.Show()

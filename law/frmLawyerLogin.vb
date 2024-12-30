@@ -35,12 +35,17 @@ Public Class frmLawyerLogin
                 MessageBox.Show("Login Successfully")
 
                 reader.Read()
+                CurrentUserID = reader("Lawyer_ID")
+                LoginStatus = 1
                 If reader("Role") = "Lawyer" Then
+                    CurrentUserRole = "Lawyer"
                     frmLawyer.fillForm(reader("Name").ToString, reader("Email").ToString, reader("Phone_Number").ToString, reader("Birthdate").ToString, reader("Nationality").ToString, reader("Address").ToString, reader("Role").ToString, reader("Lawyer_ID").ToString, reader("Password").ToString)
                     frmLawyer.x = reader("Lawyer_ID")
                     frmLawyer.Show()
+
                     Me.Close()
                 ElseIf reader("Role") = "Manager" Then
+                    CurrentUserRole = "Manager"
                     frmManager.fillForm(reader("Name").ToString, reader("Email").ToString, reader("Phone_Number").ToString, reader("Birthdate").ToString, reader("Nationality").ToString, reader("Address").ToString, reader("Role").ToString, reader("Lawyer_ID").ToString, reader("Password").ToString)
                     frmManager.x = reader("Lawyer_ID")
                     frmManager.Show()

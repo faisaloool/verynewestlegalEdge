@@ -36,7 +36,7 @@ Public Class frmManager
     Public Sub displayData()
         cmd = con.CreateCommand()
         cmd.CommandType = CommandType.Text
-        cmd.CommandText = "select Case_ID, Title, Client_ID from [Case] where Lawyer_ID = " & x & ""
+        cmd.CommandText = "select Case_ID, Title, Client_ID from [Case] where Lawyer_ID = " & CurrentUserID & ""
         cmd.ExecuteNonQuery()
         Dim dt As New DataTable()
         Dim da As New SqlDataAdapter(cmd)
@@ -194,5 +194,11 @@ Public Class frmManager
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         SendEMessage()
+    End Sub
+
+    Private Sub EmployeesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EmployeesToolStripMenuItem.Click
+        Me.Hide()
+        Form1.Show()
+
     End Sub
 End Class
