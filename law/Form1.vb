@@ -12,7 +12,6 @@ Public Class Form1
 
         End If
         con.Open()
-
         display_grid()
     End Sub
     Private Sub display_grid()
@@ -24,6 +23,8 @@ Public Class Form1
         da.Fill(dt)
         DataGridView1.DataSource = dt
     End Sub
+
+
 
     Private Sub DataGridView1_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellDoubleClick
 
