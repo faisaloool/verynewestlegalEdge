@@ -63,7 +63,7 @@ Partial Class Form1
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(194, Byte), Integer))
         Me.Label2.Location = New System.Drawing.Point(339, 29)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(209, 40)
+        Me.Label2.Size = New System.Drawing.Size(206, 38)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Employees"
         '
@@ -76,7 +76,8 @@ Partial Class Form1
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(227, 29)
         Me.TextBox1.TabIndex = 3
-        Me.TextBox1.Text = "ID"
+        Me.TextBox1.Text = "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++" &
+    "++++++++++++++++++++"
         '
         'ComboBox1
         '

@@ -97,6 +97,12 @@
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form2.Designer.vb">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form3.Designer.vb">
       <DependentUpon>Form3.vb</DependentUpon>
     </Compile>
@@ -119,6 +125,12 @@
       <DependentUpon>Form6.vb</DependentUpon>
     </Compile>
     <Compile Include="Form6.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form7.Designer.vb">
+      <DependentUpon>Form7.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form7.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmShowSessions.Designer.vb">
@@ -238,6 +250,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.vb</DependentUpon>
     </EmbeddedResource>
@@ -249,6 +264,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form6.resx">
       <DependentUpon>Form6.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form7.resx">
+      <DependentUpon>Form7.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmShowSessions.resx">
       <DependentUpon>frmShowSessions.vb</DependentUpon>
